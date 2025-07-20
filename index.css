@@ -1,0 +1,102 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+   background: linear-gradient(to bottom, #473806, #ebdc55);
+   
+
+}
+
+.header{
+color: #805b18;
+  /*background: linear-gradient(to bottom, #473806, #ebdc55);*/
+  padding: 20px;
+  text-align: center;
+  
+}
+ .menu {
+  background: linear-gradient(to bottom, #ebdc55,#473806);
+ overflow: hidden;
+ padding: 20px;
+ display: flex;
+ }
+
+ .menu a{
+  color: #ebdc55;
+  padding: 14px 40px; /*...40 espaco entre..*/
+  float: left;
+  display: block;
+  text-decoration: none;
+ }
+
+.img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  background: none; /* Remove fundo duplicado */
+}
+
+ .under-construction {
+  color: red;
+  text-align: center;
+  padding: 20px;
+   background: linear-gradient(to bottom, #473806, #ebdc55);
+}
+
+.texto-final {
+  color: #5c4211;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 80px;
+  background: linear-gradient(to bottom,#ebdc55, #473806);
+}
+
+@media screen and (max-width: 780px) {
+
+  html, body {
+    margin: 0;              /* evita rolagem lateral */
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+.top-bar {
+   margin: 10px; 
+    padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px; /* Espaço entre menu e imagens */
+  
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 250px;      /* Defina a largura desejada */
+  min-width: 150px;
+  background: linear-gradient(to bottom, #473806);
+  
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 450px;      /* Defina a largura desejada */
+  min-width: 150px;
+}
+ .menu a{
+  color: #f5e106;
+  padding: 14px 40px; /*...40 espaco entre..*/
+  float: left;
+  display: block;
+  text-decoration: none;
+ }
+
+  }
