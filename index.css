@@ -10,10 +10,19 @@ body{
 }
 
 .header{
-color: #805b18;
+color: #664408;
   /*background: linear-gradient(to bottom, #473806, #ebdc55);*/
   padding: 20px;
   text-align: center;
+  
+}
+.top-bar {
+   margin: 20px; 
+    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px; /* Espaço entre menu e imagens */
   
 }
  .menu {
