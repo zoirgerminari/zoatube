@@ -10,53 +10,103 @@
     <!-- Cache buster: 2025-07-21 -->
 </head>
 <body>
-   <header class="header">
-        <h1>Zoatube</h1>
-   </header>
-
-    <div class="top-bar">
-    <div class="menu">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="VIDEOS.html">VIDEOS</a>
-            <a href="contato.html" target="_blank">CONTACT</a>
-            <a href="NUMEROLOGIA.html">NUMEROLOGIA</a>
-            <a href="MUSIC.html">MUSICs</a>
-            <a href="equipe/dimitri.html">WE</a>
-</div>
-          </div>
-
-    
-    
-
-
-    
-
     <main class="main-content">
-        <section class="under-construction">
-            <h3>UNDER CONSTRUCTION</h3>
-        </section>
-        
-        <section class="intro-section">
-            <h1>Zoir Germinari</h1>
-            <h2>Software Developer</h2>
-            <p>Welcome to Zoatube - Your multimedia platform</p>
-        </section>
-        
-        <section class="features">
-            <div class="feature-card">
-                <h3>Videos</h3>
-                <p>Explore our video collection</p>
+        <div class="youtube-shell">
+            <header class="youtube-header">
+                <div class="brand-wrap">
+                    <button class="menu-button" aria-label="Menu">☰</button>
+                    <div class="brand">
+                        <span class="brand-icon">▶</span>
+                        <span>Zoatube</span>
+                    </div>
+                </div>
+
+                <div class="search-wrap">
+                    <input type="text" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="search-button" aria-label="Pesquisar">⌕</button>
+                </div>
+
+                <div class="header-actions">
+                    <button class="upload-btn">+ Upload</button>
+                    <div class="user-badge">Z</div>
+                </div>
+            </header>
+
+            <div class="youtube-body">
+                <aside class="youtube-sidebar">
+                    <nav>
+                        <a class="active" href="#">Início</a>
+                        <a href="#">Curtidos</a>
+                        <a href="#">Explorar</a>
+                        <a href="#">Shorts</a>
+                        <a href="#">Biblioteca</a>
+                        <a href="#">Histórico</a>
+                        <a href="#">Vídeos</a>
+                    </nav>
+                </aside>
+
+                <section class="youtube-feed">
+                    <div class="featured-banner">
+                        <div class="banner-content">
+                            <span class="tag">Novo</span>
+                            <h2>Uploads em destaque</h2>
+                            <p>Veja os vídeos mais recentes do canal.</p>
+                            <button>Assistir agora</button>
+                        </div>
+                    </div>
+
+                    <section class="video-section">
+                        <div class="section-title-row">
+                            <h2>Uploads de vídeos</h2>
+                        </div>
+
+                        <div class="video-grid">
+                            <article class="video-card">
+                                <a href="https://youtu.be/W9h6-gf0yvI" target="_blank" rel="noreferrer" class="thumbnail-link">
+                                    <img class="yt-thumb" src="https://img.youtube.com/vi/W9h6-gf0yvI/hqdefault.jpg" alt="Vídeo do YouTube 1">
+                                </a>
+                                <div class="video-meta">
+                                    <div class="avatar">Z</div>
+                                    <div class="meta-copy">
+                                        <h3>Vídeo 1</h3>
+                                        <p>Zoatube</p>
+                                        <p>Assista no YouTube</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="video-card">
+                                <a href="https://youtu.be/jVgU0ZvSbvg" target="_blank" rel="noreferrer" class="thumbnail-link">
+                                    <img class="yt-thumb" src="https://img.youtube.com/vi/jVgU0ZvSbvg/hqdefault.jpg" alt="Vídeo do YouTube 2">
+                                </a>
+                                <div class="video-meta">
+                                    <div class="avatar avatar-two">Z</div>
+                                    <div class="meta-copy">
+                                        <h3>Vídeo 2</h3>
+                                        <p>Zoatube</p>
+                                        <p>Assista no YouTube</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="video-card">
+                                <a href="https://youtu.be/_k7aXs1CEtI" target="_blank" rel="noreferrer" class="thumbnail-link">
+                                    <img class="yt-thumb" src="https://img.youtube.com/vi/_k7aXs1CEtI/hqdefault.jpg" alt="Vídeo do YouTube 3">
+                                </a>
+                                <div class="video-meta">
+                                    <div class="avatar avatar-three">Z</div>
+                                    <div class="meta-copy">
+                                        <h3>Vídeo 3</h3>
+                                        <p>Zoatube</p>
+                                        <p>Assista no YouTube</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
             </div>
-            <div class="feature-card">
-                <h3>Music</h3>
-                <p>Listen to our music selection</p>
-            </div>
-            <div class="feature-card">
-                <h3>Numerology</h3>
-                <p>Discover the power of numbers</p>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
