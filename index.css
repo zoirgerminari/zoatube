@@ -208,9 +208,64 @@ body {
   border: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-size: 1.2rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+}
+
+.menu-button span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.mobile-menu-wrap {
+  position: relative;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 210px;
+  background: rgba(18, 22, 29, 0.98);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  padding: 10px;
+  z-index: 20;
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.mobile-menu a:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-menu a.active,
+.mobile-menu a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent);
 }
 
 .brand {
@@ -306,25 +361,43 @@ body {
   height: fit-content;
 }
 
-.youtube-sidebar nav {
+.promo-box {
+  min-height: 260px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(110, 231, 255, 0.08), rgba(167, 139, 250, 0.12), rgba(17, 21, 29, 0.95));
+  border: 1px solid rgba(110, 231, 255, 0.16);
+  box-shadow: inset 0 0 20px rgba(110, 231, 255, 0.06);
 }
 
-.youtube-sidebar a {
-  text-decoration: none;
-  color: var(--muted);
-  padding: 12px 14px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.2s ease;
+.promo-tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--accent-3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
 }
 
-.youtube-sidebar a:hover,
-.youtube-sidebar a.active {
-  background: rgba(255, 255, 255, 0.06);
+.promo-box h3 {
+  margin: 0 0 8px;
   color: var(--text);
+  font-size: 1.4rem;
+}
+
+.promo-box p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .youtube-feed {
@@ -557,11 +630,13 @@ body {
     gap: 12px;
     padding: 12px 10px;
     margin-top: 0;
+    align-items: flex-start;
   }
 
   .brand-wrap {
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 
   .search-wrap {
@@ -583,13 +658,112 @@ body {
   }
 
   .youtube-sidebar {
-    width: 100%;
+    display: none;
   }
 
-  .youtube-sidebar nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+  .mobile-menu-wrap {
+    display: block;
+    position: relative;
+  }
+
+  .menu-button {
+    position: relative;
+    z-index: 30;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: visible;
+  }
+
+  .menu-button:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: scale(1.02);
+    box-shadow: 0 0 0 1px rgba(110, 231, 255, 0.12);
+  }
+
+  .menu-button span {
+    width: 15px;
+    height: 2px;
+    background: var(--text);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .menu-button.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-button.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-button.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    background: rgba(15, 18, 24, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9) translateY(-4px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 25;
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu a {
+    padding: 9px 10px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .mobile-menu a.active,
+  .mobile-menu a:hover {
+    background: linear-gradient(135deg, rgba(110, 231, 255, 0.12), rgba(167, 139, 250, 0.12));
+    border: 1px solid rgba(110, 231, 255, 0.14);
+  }
+
+  .mobile-menu a {
+    padding: 9px 10px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .mobile-menu a.active,
+  .mobile-menu a:hover {
+    background: linear-gradient(135deg, rgba(110, 231, 255, 0.12), rgba(167, 139, 250, 0.12));
+    border: 1px solid rgba(110, 231, 255, 0.14);
+  }
+
+  .brand {
+    font-size: 1.1rem;
   }
 
   .featured-banner {

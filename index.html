@@ -14,7 +14,22 @@
         <div class="youtube-shell">
             <header class="youtube-header">
                 <div class="brand-wrap">
-                    <button class="menu-button" aria-label="Menu">☰</button>
+                    <div class="mobile-menu-wrap">
+                        <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <nav class="mobile-menu" id="mobileMenu" aria-label="Menu móvel">
+                            <a class="active" href="#">Início</a>
+                            <a href="#">Curtidos</a>
+                            <a href="#">Explorar</a>
+                            <a href="#">Shorts</a>
+                            <a href="#">Biblioteca</a>
+                            <a href="#">Histórico</a>
+                            <a href="#">Vídeos</a>
+                        </nav>
+                    </div>
                     <div class="brand">
                         <span class="brand-icon">▶</span>
                         <span>Zoatube</span>
@@ -33,16 +48,12 @@
             </header>
 
             <div class="youtube-body">
-                <aside class="youtube-sidebar">
-                    <nav>
-                        <a class="active" href="#">Início</a>
-                        <a href="#">Curtidos</a>
-                        <a href="#">Explorar</a>
-                        <a href="#">Shorts</a>
-                        <a href="#">Biblioteca</a>
-                        <a href="#">Histórico</a>
-                        <a href="#">Vídeos</a>
-                    </nav>
+                <aside class="youtube-sidebar" aria-label="Espaço para propaganda">
+                    <div class="promo-box">
+                        <span class="promo-tag">Anúncio</span>
+                        <h3>Seu espaço</h3>
+                        <p>Coloque sua propaganda aqui.</p>
+                    </div>
                 </aside>
 
                 <section class="youtube-feed">
@@ -63,7 +74,7 @@
                         <div class="video-grid">
                             <article class="video-card">
                                 <a href="https://youtu.be/W9h6-gf0yvI" target="_blank" rel="noreferrer" class="thumbnail-link">
-                                    <img class="yt-thumb" src="https://img.youtube.com/vi/W9h6-gf0yvI/hqdefault.jpg" alt="Vídeo do YouTube 1">
+                                    <img class="yt-thumb" src="assets/video-cover-1.svg" alt="Capa do vídeo 1">
                                 </a>
                                 <div class="video-meta">
                                     <div class="avatar">Z</div>
@@ -77,7 +88,7 @@
 
                             <article class="video-card">
                                 <a href="https://youtu.be/jVgU0ZvSbvg" target="_blank" rel="noreferrer" class="thumbnail-link">
-                                    <img class="yt-thumb" src="https://img.youtube.com/vi/jVgU0ZvSbvg/hqdefault.jpg" alt="Vídeo do YouTube 2">
+                                    <img class="yt-thumb" src="assets/video-cover-2.svg" alt="Capa do vídeo 2">
                                 </a>
                                 <div class="video-meta">
                                     <div class="avatar avatar-two">Z</div>
@@ -91,7 +102,7 @@
 
                             <article class="video-card">
                                 <a href="https://youtu.be/_k7aXs1CEtI" target="_blank" rel="noreferrer" class="thumbnail-link">
-                                    <img class="yt-thumb" src="https://img.youtube.com/vi/_k7aXs1CEtI/hqdefault.jpg" alt="Vídeo do YouTube 3">
+                                    <img class="yt-thumb" src="assets/video-cover-3.svg" alt="Capa do vídeo 3">
                                 </a>
                                 <div class="video-meta">
                                     <div class="avatar avatar-three">Z</div>
@@ -113,7 +124,8 @@
         <p>&copy; 2025 Zoatube - Zoir Germinari. All rights reserved.</p>
     </footer>
 
- </body>
+    <script src="script.js"></script>
+</body>
 </html>
 
 
