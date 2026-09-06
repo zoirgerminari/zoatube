@@ -6,8 +6,8 @@
     </linearGradient>
   </defs>
   <rect width="1280" height="720" fill="url(#bg1)"/>
-  <circle cx="1040" cy="160" r="140" fill="rgba(255,255,255,0.18)"/>
-  <path d="M600 220C600 187.967 625.967 162 658 162H760C792.033 162 818 187.967 818 220V500C818 532.033 792.033 558 760 558H658C625.967 558 600 532.033 600 500V220Z" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="1040" cy="160" r="140" fill="#FFFFFF" fill-opacity="0.18"/>
+  <path d="M600 220C600 187.967 625.967 162 658 162H760C792.033 162 818 187.967 818 220V500C818 532.033 792.033 558 760 558H658C625.967 558 600 532.033 600 500V220Z" fill="#FFFFFF" fill-opacity="0.18"/>
   <path d="M690 255L790 360L690 465V255Z" fill="white"/>
   <text x="640" y="610" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" text-anchor="middle">VÍDEO 1</text>
 </svg>
